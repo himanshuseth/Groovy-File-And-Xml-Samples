@@ -3,5 +3,5 @@ Exercises :
 	- List all directories with in a folder
 	- copy folder "a" along with all its contents to "b". Also in all "files" replace text "java" with "groovy"
 	- read file "books.xml" using both XmlParser and XmlSlurper
+	- Create a simple program that parses addresses.csv file to create a addresses.xml
 	- Create a simple program which parses any .csv file with headers and creates a corresponding xml file
-	- 

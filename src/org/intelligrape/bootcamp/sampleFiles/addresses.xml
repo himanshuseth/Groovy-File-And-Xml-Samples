@@ -1,0 +1,23 @@
+<addressBook>
+  <entry>
+    <id>99</id>
+    <name>John Smith</name>
+    <age>13</age>
+    <english>45</english>
+    <maths>50</maths>
+  </entry>
+  <entry>
+    <id>100</id>
+    <name>Jane Doe</name>
+    <age>15</age>
+    <english>59</english>
+    <maths>75</maths>
+  </entry>
+  <entry>
+    <id>101</id>
+    <name>Frank Jones</name>
+    <age>11</age>
+    <english>40</english>
+    <maths>90</maths>
+  </entry>
+</addressBook>

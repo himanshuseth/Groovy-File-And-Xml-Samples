@@ -1,6 +1,10 @@
 def xml = new groovy.xml.MarkupBuilder()
-xml.person(id:99){
-  firstname("John" )
+String tagName = "himanshu"
+Map params = [id:99, type:'home']
+xml.person(params){
+  firstname(id:10 ){
+	  "${tagName}"("Test")
+  }
   lastname("Smith" )
 }
 

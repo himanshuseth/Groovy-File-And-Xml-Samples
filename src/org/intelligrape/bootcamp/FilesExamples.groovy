@@ -1,33 +1,44 @@
-package org.intelligrape.bootcamp
+package org.intelligrape.bootcamp                                            \
+
+import java.io.File as MyFile;
 
 String filePath = "sampleFiles/x.txt"
-/*
+
+/*//EachFIleRecurse
+File file = new File("sampleFiles")
+file.eachFileRecurse {
+	println it.getClass()
+	println it.absolutePath
+}*/
 
 //Read a simple file
-println new File(filePath ).eachLine{line->
-  println line
-}
+//new File(filePath ).eachLine{line->
+//  println "line:  " + line
+//}
 
-// Read file data to variable
-String body = new File(filePath).text
-println body
+//Read file data to variable
+//String body = new File(filePath).text
+//println body
 
 //Write data to a file
-File file = new File("sampleFiles/hello.txt" )
+MyFile file = new MyFile("sampleFiles/hello.txt" )
 file.write("Hello World\n" )
 println file.text
 
+/*
 //Append data to a file
 file.append ("Hello Again !!!")
 println file.text
 */
 
 //Working with Streams
-File copy = new File(filePath+".copy")
-copy.createNewFile()
-copy.withOutputStream {out ->
-	new File(filePath).withInputStream {is->
+File copiedFile = new File(filePath+".copiedFile")
+File oldFile = new File(filePath)
+copiedFile.createNewFile()
+copiedFile.withOutputStream {out ->
+	oldFile.withInputStream {is->
 		out << is
 	}
+//same as out.write(new File(filePath).readBytes())
 }
-println copy.text
+println copiedFile.text
